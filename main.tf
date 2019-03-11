@@ -41,5 +41,5 @@ resource "aws_ssm_maintenance_window_task" "task" {
 resource "aws_instance" "instance" {
   ami = "${var.ami_id}"
 
-  instance_type = "t1.micro"
+  instance_type = "t2.micro"
 }
