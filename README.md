@@ -4,11 +4,11 @@ AWS Maintenance window resource - test
 
 **TO-DO** 
 
-- Create terraform configuration file which: 
-  - TFE as remote backend
+- Thorough README file
 
 
 **DONE**
 
 - Create terraform configuration file which: 
   - has an ssm maintenance window resource 
+  - has TFE as remote backend
