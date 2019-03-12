@@ -2,6 +2,7 @@ variable "aws_access_key" {}
 variable "aws_secret_key" {}
 variable "ami_id" {}
 variable "key_name" {}
+variable "aws_arn" {}
 
 provider "aws" {
   access_key = "${var.aws_access_key}"
@@ -23,7 +24,7 @@ resource "aws_ssm_maintenance_window_task" "task" {
   task_type        = "RUN_COMMAND"
   task_arn         = "AWS-RunShellScript"
   priority         = 1
-  service_role_arn = "arn:aws:iam::187416307283:role/service-role/AWS_Events_Invoke_Run_Command_112316643"
+  service_role_arn = "${var.aws_arn}"
   max_concurrency  = "2"
   max_errors       = "1"
 
