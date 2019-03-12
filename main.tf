@@ -4,6 +4,17 @@ variable "ami_id" {}
 variable "key_name" {}
 variable "aws_arn" {}
 
+terraform {
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "HiveCorp"
+
+    workspaces = {
+      name = "tfe_aws_ssm_resource"
+    }
+  }
+}
+
 provider "aws" {
   access_key = "${var.aws_access_key}"
   secret_key = "${var.aws_secret_key}"
