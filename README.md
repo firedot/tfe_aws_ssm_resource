@@ -3,6 +3,7 @@ AWS Maintenance window resource - test
 
 **Prerequisites**
  - Basic of Terraform, which could be gained [here](https://www.terraform.io/intro/index.html)
+ - Basic knowledge of Terraform Enterprise, or click [here](https://www.terraform.io/docs/enterprise/getting-started/index.html) to learn more about it.
  - Terraform Enterprise account
  - Terraform CLI should be installed on your computer
  - AWS account
@@ -88,6 +89,14 @@ The resource that is going to be used in this example is `aws_ssm_maintenance_wi
   }
   ```
 
- - Commit your code to GitHub (or your VCS of choice)
+ - Commit your code to GitHub (or your VCS of choice) and merge it to your master branch.
 
- - Add your VCS repository to Terraform Enterprise
+ - Create a new workspace in [Terraform Enterprise](app.terraform.io)
+   - more on how to do it [here](https://www.terraform.io/docs/enterprise/workspaces/creating.html)
+
+ - Add your VCS repository to the new workspace that you created in  Terraform Enterprise
+   - more on how to do this [here](https://www.terraform.io/docs/enterprise/vcs/index.html)
+
+ - 
+
+
